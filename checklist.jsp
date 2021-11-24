@@ -1,1 +1,1 @@
-list of subjects
+checklist of subjects
