@@ -1,0 +1,134 @@
+:root {
+  font-size: 16px;
+}
+body {
+  background-color: #CECECE;
+  margin: 0;
+}
+
+header, nav, footer {
+  text-align: center;
+}
+
+
+nav > a {
+  border: 1px solid black;
+  display: block;
+  padding: 0.25em;
+  margin: 0.25em;
+  border-radius: 0.25em;
+}
+
+.card {
+  background-color: whitesmoke;
+  margin: 1rem;
+  box-shadow: 0.25rem 0.25rem 1rem #0009;
+  transition: box-shadow 0.5s;
+}
+
+.card:hover {
+  box-shadow: 0.1rem 0.1rem 0.5rem #0009;
+}
+
+.card__header {
+  font-size: 1.2rem;
+  background-color: firebrick;
+  color: whitesmoke;
+  padding: 1rem;
+}
+
+.card__data {
+  padding: 2rem;
+}
+.card__data > *{
+  border: 1px solid #0009;
+  list-style-type: square;
+}
+
+.card__data > *:first-child {
+  border-radius: 0 0.5rem 0 0;
+  background: linear-gradient(#0009, #0000);
+}
+
+.card__data > *:last-child {
+  border-radius: 0 0 0.5rem 0;
+  background: linear-gradient(#0000, #0009);
+}
+
+
+.card__data > *:only-child {
+  border-radius: 0 0.5rem 0.5rem 0;
+  background: linear-gradient( #0009, #0000, #0009);
+}
+
+.card__synopsis {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 1px dotted currentColor;
+
+}
+
+.card__synopsis > p::first-line {
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+.card__synopsis > p::first-letter {
+  font-size: 2em;
+}
+
+.card__footer {
+  border-top: 1px double #0009;
+}
+
+
+@media (min-width: 1024px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+  }
+
+  main {
+    --n-of-columns: 2;
+    display: grid;
+    grid-template-columns: repeat(var(--n-of-columns), 1fr);
+  }
+}
+
+@media (min-width: 1200px){
+  main {
+    --n-of-columns: 2;
+  }
+
+  .card {
+    display: grid;
+    grid-template-areas:
+    "top top"
+    "left right"
+    "bottom bottom";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  .card__header {
+    grid-area: top;
+  }
+
+  .card__data {
+    grid-area: left;
+  }
+  .card__synopsis {
+    grid-area: right;
+  }
+
+  .card__footer {
+    grid-area: bottom;
+  }
+}
+
+@media (min-width: 1900px){
+  main {
+    --n-of-columns: 3;
+  }
+}
