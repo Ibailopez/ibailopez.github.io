@@ -1,0 +1,20 @@
+From ccc98cd9b8b41e755e2e7e4bc859165969c41d68 Mon Sep 17 00:00:00 2001
+From: Jon <jon.astigarragaa@alumni.mondragon.edu>
+Date: Wed, 24 Nov 2021 12:54:32 +0100
+Subject: [PATCH] add styling
+
+---
+ styling | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 160000 styling
+
+diff --git a/styling b/styling
+new file mode 160000
+index 0000000..3a5784b
+--- /dev/null
++++ b/styling
+@@ -0,0 +1 @@
++Subproject commit 3a5784b065d6c64c2000330f0b8e07df97323435
+-- 
+2.33.1.windows.1
+
